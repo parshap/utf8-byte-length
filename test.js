@@ -24,6 +24,10 @@ catch (err) {
   process.exit(1);
 }
 
+
+// 8-byte, 4-character string
+var THUMB = "👍🏽";
+
 // Tests run against both implementations
 [getLength, browserGetLength].forEach(function(getLength) {
   // Strings with known lengths
@@ -34,6 +38,14 @@ catch (err) {
     [repeat("a", 250) + '\uD800\uDC00', 254],
     [repeat("a", 251) + '\uD800\uDC00', 255],
     [repeat("a", 252) + '\uD800\uDC00', 256],
+    [THUMB, 8],
+    [THUMB[0], 3],
+    [THUMB[1], 3],
+    [THUMB[2], 3],
+    [THUMB[3], 3],
+    [THUMB.slice(0, 2), 4],
+    [THUMB.slice(2, 4), 4],
+    [THUMB.slice(1, 3), 6],
   ].forEach(function(desc) {
     var string = desc[0];
     var length = desc[1];
