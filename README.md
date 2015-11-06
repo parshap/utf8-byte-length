@@ -1,4 +1,4 @@
-# utf8-byte-length
+# utf8-byte-length [![build status](https://secure.travis-ci.org/parshap/utf8-byte-length.svg?branch=master)](http://travis-ci.org/parshap/utf8-byte-length)
 
 Get the byte length of a utf8 string, taking into account multi-byte and
 surrogate characters.
