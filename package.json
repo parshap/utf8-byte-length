@@ -1,6 +1,6 @@
 {
   "name": "utf8-byte-length",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Get utf8 byte length of string",
   "main": "index.js",
   "browser": "browser.js",
